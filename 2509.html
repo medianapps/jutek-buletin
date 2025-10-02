@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuTeK - Jurnal Teknologi Karyawan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .intro {
+            padding: 20px;
+            background-color: #f8f9ff;
+            border-left: 4px solid #667eea;
+        }
+        .intro h2 {
+            margin: 0 0 15px 0;
+            color: #333;
+            font-size: 1.4em;
+        }
+        .articles-section {
+            padding: 20px;
+        }
+        .articles-section h2 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        .article {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+            transition: transform 0.2s;
+        }
+        .article:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .author-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+        .author-details h3 {
+            margin: 0;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .category-tag {
+            background-color: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        .article-title {
+            font-size: 1.2em;
+            color: #333;
+            margin: 15px 0 10px 0;
+            font-weight: bold;
+        }
+        .read-more {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .read-more:hover {
+            background-color: #5a6fd8;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta-section h2 {
+            margin: 0 0 15px 0;
+            font-size: 1.8em;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #4CAF50;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 20px 0;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        .benefits {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            margin: 0;
+        }
+        .benefits h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .benefit-item {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .benefit-item:before {
+            content: "✓";
+            /* position: absolute;
+            left: 0; */
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background-color: #667eea;
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>JuTeK</h1>
+            <p>Jurnal Teknologi Karyawan - Edisi Bulan Ini</p>
+        </div>
+
+        <!-- Intro Section -->
+        <div class="intro">
+            <h2>🚀 Inovasi Teknologi dari Tim Terbaik</h2>
+            <p>Selamat datang di edisi terbaru JuTeK! Bulan ini, kami menghadirkan 8 artikel inspiratif dari rekan-rekan terbaik yang siap membuka wawasan teknologi Anda. Dari Big Data hingga AI, dari framework CSS modern hingga tips networking - semuanya ada di sini!</p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">8</span>
+                <span>Artikel Terbaru</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span>Kontributor Aktif</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span>Konten Berkualitas</span>
+            </div>
+        </div>
+
+        <!-- Articles Section -->
+        <div class="articles-section">
+            <h2>📚 Artikel Pilihan Bulan Ini</h2>
+
+            <!-- Article 4 -->
+            <div class="article">
+                <div class="author-info">
+                    <div class="author-avatar">MR</div>
+                    <div class="author-details">
+                        <h3>Muhammad Reiza Suryadisastra <span class="category-tag">Tech</span></h3>
+                    </div>
+                </div>
+                <div class="article-title">Green Technology China: Kiblat Baru yang Menggeser Silicon Valley?</div>
+                <p>Analisis mendalam tentang perkembangan teknologi hijau China dan bagaimana negara ini berpotensi menggeser dominasi Silicon Valley di masa depan.</p>
+                <a href="https://medianraya.medium.com/green-technology-china-kiblat-baru-yang-menggeser-silicon-valley-081075c2fea2" class="read-more">Baca Selengkapnya →</a>
+            </div>
+
+            <!-- Article 1 -->
+            <div class="article">
+                <div class="author-info">
+                    <div class="author-avatar">YI</div>
+                    <div class="author-details">
+                        <h3>Yance Ibnu Qalam <span class="category-tag">Data</span></h3>
+                    </div>
+                </div>
+                <div class="article-title">Mengenal Big Data dan Data Science</div>
+                <p>Dive deep ke dunia Big Data dan Data Science. Pelajari konsep fundamental, tools, dan bagaimana teknologi ini mengubah cara kita memahami data di era digital.</p>
+                <a href="https://medianraya.medium.com/mengenal-big-data-dan-data-science-de50251774b1" class="read-more">Baca Selengkapnya →</a>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article">
+                <div class="author-info">
+                    <div class="author-avatar">RH</div>
+                    <div class="author-details">
+                        <h3>Rahadian Hadi <span class="category-tag">GitHub Copilot</span></h3>
+                    </div>
+                </div>
+                <div class="article-title">Ngoprek GitHub Copilot di Visual Studio Code: dari Kenalan sampai Best Practices</div>
+                <p>Panduan lengkap mengoptimalkan GitHub Copilot untuk meningkatkan produktivitas coding. Tips dan trik dari basic usage hingga advanced practices.</p>
+                <a href="https://medianraya.medium.com/ngoprek-github-copilot-di-visual-studio-code-dari-kenalan-sampai-best-practices-e210cdfa7fcc" class="read-more">Baca Selengkapnya →</a>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="article">
+                <div class="author-info">
+                    <div class="author-avatar">AK</div>
+                    <div class="author-details">
+                        <h3>Achmad Kurniawan <span class="category-tag">Postman</span></h3>
+                    </div>
+                </div>
+                <div class="article-title">Import Request cURL API dengan menggunakan Postman</div>
+                <p>Tutorial praktis mengconvert cURL commands ke Postman untuk testing API yang lebih efisien dan terorganisir.</p>
+                <a href="https://medianraya.medium.com/2d47c84ea989" class="read-more">Baca Selengkapnya →</a>
+            </div>
+
+            
+
+            <!-- Article 5 -->
+            <div class="article">
+                <div class="author-info">
+                    <div class="author-avatar">FI</div>
+                    <div class="author-details">
+                        <h3>Farrel Izzan Maulana <span class="category-tag">AI</span></h3>
+                    </div>
+                </div>
+                <div class="article-title">Menghemat Waktu dan Tenaga di Era Digital</div>
+                <p>Strategi cerdas memanfaatkan AI untuk meningkatkan produktivitas kerja. Tools dan tips praktis untuk mengoptimalkan workflow harian Anda.</p>
+                <a href="https://medianraya.medium.com/ai-untuk-produktivitas-cara-cerdas-menghemat-waktu-dan-tenaga-di-era-digital-184dbe66f130" class="read-more">Baca Selengkapnya →</a>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="article">
+                <div class="author-info">
+                    <div class="author-avatar">AF</div>
+                    <div class="author-details">
+                        <h3>Ahmad Fauzan <span class="category-tag">AI</span></h3>
+                    </div>
+                </div>
+                <div class="article-title">LM Studio: Cara Mudah Punya "ChatGPT" Pribadi di Komputer Anda, Tanpa Internet dan Biaya Langganan</div>
+                <p>Setup LM Studio untuk menjalankan Large Language Model secara lokal. Solusi privacy-friendly untuk kebutuhan AI personal tanpa ketergantungan internet.</p>
+                <a href="https://medianraya.medium.com/lm-studio-cara-mudah-punya-chatgpt-pribadi-di-komputer-anda-tanpa-internet-dan-biaya-langganan-99e334551142" class="read-more">Baca Selengkapnya →</a>
+            </div>
+
+            <!-- Article 7 -->
+            <div class="article">
+                <div class="author-info">
+                    <div class="author-avatar">KN</div>
+                    <div class="author-details">
+                        <h3>Kafiya Nuril K <span class="category-tag">CSS</span></h3>
+                    </div>
+                </div>
+                <div class="article-title">Pico.css: Framework CSS Minimalis untuk Tampilan Web Modern</div>
+                <p>Kenalan dengan Pico.css, framework CSS yang ringan namun powerful untuk membuat website modern dengan kode minimal dan performa maksimal.</p>
+                <a href="https://medianraya.medium.com/pico-css-framework-css-minimalis-untuk-tampilan-web-modern-64d1a2414a49" class="read-more">Baca Selengkapnya →</a>
+            </div>
+
+            <!-- Article 8 -->
+            <div class="article">
+                <div class="author-info">
+                    <div class="author-avatar">MA</div>
+                    <div class="author-details">
+                        <h3>Muhammad Afdhal Adzikrie <span class="category-tag">Network</span></h3>
+                    </div>
+                </div>
+                <div class="article-title">Rahasia Bikin Internet HP Jadi Kencang: Setting APN Kartu SIM</div>
+                <p>Tips dan trik optimasi setting APN untuk berbagai provider seluler. Panduan praktis meningkatkan kecepatan internet mobile Anda.</p>
+                <a href="https://medianraya.medium.com/rahasia-bikin-internet-hp-jadi-kencang-setting-apn-kartu-sim-acc267bd5dfd" class="read-more">Baca Selengkapnya →</a>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>🌟 Bergabunglah dengan Komunitas JuTeK!</h2>
+            <p>Punya insights teknologi menarik? Bagikan pengetahuan Anda dan jadilah bagian dari komunitas tech terdepan!</p>
+            <a href="https://bit.ly/jutek-form" class="cta-button">Kirim Artikel Anda Sekarang!</a>
+            
+            <div class="benefits">
+                <h3>🎯 Manfaat Bergabung dengan JuTeK:</h3>
+                <div class="benefit-item">🚀 <strong>Tingkatkan Personal Branding:</strong> <br />Bangun reputasi sebagai thought leader di bidang teknologi</div>
+                <div class="benefit-item">🤝 <strong>Networking Berkualitas:</strong> <br />Terhubung dengan profesional tech terbaik dari berbagai divisi</div>
+                <div class="benefit-item">📈 <strong>Skill Development:</strong> <br />Asah kemampuan technical writing dan komunikasi</div>
+                <div class="benefit-item">🎓 <strong>Knowledge Sharing:</strong> <br />Berbagi dan belajar dari pengalaman sesama engineer</div>
+                <div class="benefit-item">🏆 <strong>Recognition:</strong> <br />Dapatkan apresiasi dari management dan rekan kerja</div>
+                <div class="benefit-item">💡 <strong>Innovation Culture:</strong> <br />Dorong budaya inovasi dan continuous learning di perusahaan</div>
+                <div class="benefit-item">📚 <strong>Documentation:</strong> <br />Ciptakan knowledge base yang berharga untuk tim dan perusahaan</div>
+                <div class="benefit-item">🌐 <strong>Industry Exposure:</strong> <br />Artikel Anda dapat dibaca oleh profesional di seluruh industri</div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 15px; background-color: rgba(255,255,255,0.1); border-radius: 8px;">
+                <h3>💪 Habit Positif untuk Perusahaan:</h3>
+                <p>Dengan rutin berkontribusi setiap bulan, kita membangun budaya <strong>continuous learning</strong>, meningkatkan <strong>knowledge retention</strong>, dan menciptakan <strong>innovation ecosystem</strong> yang berkelanjutan. Setiap artikel adalah investasi untuk kemajuan bersama!</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 JuTeK - Jurnal Teknologi Karyawan | Inspiring Innovation Through Knowledge Sharing</p>
+            <p>📧 Untuk pertanyaan atau saran, hubungi tim JuTeK</p>
+        </div>
+    </div>
+</body>
+</html>
