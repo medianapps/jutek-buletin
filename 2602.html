@@ -4,204 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JuTeK - Jurnal Teknologi Karyawan</title>
-    <!-- Menggunakan PicoCSS versi terbaru via CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    
-    <style>
-        /* Kustomisasi Sederhana */
-        :root {
-            --pico-font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            --pico-primary: #e65100; /* Oranye disesuaikan dengan logo DASA */
-            --pico-primary-background: #e65100;
-            --pico-primary-hover: #bf360c;
-        }
-
-        header {
-            text-align: center;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--pico-muted-border-color);
-            margin-bottom: 2rem;
-        }
-
-        .logo {
-            max-width: 180px; /* Sedikit diperbesar agar logo DASA lebih jelas */
-            height: auto;
-            margin-bottom: 1rem;
-        }
-
-        .newsletter-meta {
-            color: var(--pico-muted-color);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
-        .tag-auth { background-color: #d32f2f; }
-        .tag-prod { background-color: #388e3c; }
-        .tag-info { background-color: #f57c00; }
-
-        .infographic-container {
-            text-align: center;
-            background-color: var(--pico-card-background-color);
-            padding: 2rem;
-            border-radius: var(--pico-border-radius);
-            box-shadow: var(--pico-card-box-shadow);
-            margin-bottom: 3rem;
-        }
-
-        .infographic-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .highlight-box {
-            background-color: #fff3e0;
-            border-left: 4px solid #e65100;
-            padding: 1rem;
-            margin-top: 1rem;
-            text-align: left;
-            font-size: 0.9rem;
-            color: #333;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--pico-muted-color);
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--pico-muted-border-color);
-        }
-        
-        /* Tambahkan padding 15% kiri/kanan untuk seluruh konten utama pada halaman ini */
-        main.container {
-            padding-left: 15%;
-            padding-right: 15%;
-            box-sizing: border-box;
-        }
-    </style>
 </head>
-<body>
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
 
-    <main class="container">
-        
-        <!-- HEADER -->
-        <header>
-            
-            <h1>JuTeK</h1>
-            <p><strong>Jurnal Teknologi Karyawan</strong></p>
-            <div class="newsletter-meta">Edisi Februari 2026</div>
-        </header>
-
-        <!-- SECTION: INFOGRAFIS & EVALUASI (Updated with actual data) -->
-        <section>
-            <div class="infographic-container">
-                <span class="tag tag-info">Laporan Evaluasi</span>
-                <hgroup>
-                    <h2>Evaluasi Program JuTeK</h2>
-                    <p>Suara Karyawan untuk Pengembangan Bersama</p>
-                </hgroup>
-                
-                <!-- Infografis Image (Updated to .jpg) -->
-                <img src="ev25.png" alt="Infografis Evaluasi JuTeK - Data Statistik" class="infographic-img" onerror="this.src='https://placehold.co/800x1200/EEE/31343C?text=Infografis+ev25.jpg+Tidak+Ditemukan';">
-                
-                <!-- Narasi Infografis (Updated based on image content) -->
-                <div style="text-align: left; margin-top: 1.5rem;">
-                    <p>
-                        Terima kasih kepada seluruh karyawan yang telah berpartisipasi dalam survei evaluasi JuTeK. Hasil menunjukkan dukungan yang luar biasa: <strong>95% responden merasakan manfaat program ini</strong> (55% Sangat Bermanfaat, 40% Bermanfaat), dan <strong>85% setuju agar program dilanjutkan</strong>.
-                    </p>
+    <!-- PEMBUNGKUS UTAMA -->
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f4f4f4; padding: 20px 0;">
+        <tr>
+            <td align="center">
+                <!-- KONTAINER EMAIL -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 650px; background-color: #ffffff; border: 1px solid #dddddd; border-radius: 8px; overflow: hidden;">
                     
-                    <div class="highlight-box">
-                        <strong>Catatan Redaksi:</strong><br>
-                        Kami mendengar kendala Anda. Data menunjukkan tantangan terbesar adalah <em>Keterbatasan Waktu (30%)</em> dan <em>Kurang Percaya Diri (25%)</em>, serta kritik mengenai beban kerja proyek yang tinggi. 
-                        <br><br>
-                        Menjawab masukan tersebut, JuTeK edisi mendatang akan difokuskan pada format yang lebih ringkas dan interaktif, agar tidak menambah tekanan di tengah kesibukan proyek.
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <!-- HEADER -->
+                    <tr>
+                        <td style="padding: 40px 15% 20px 15%; text-align: center; border-bottom: 1px solid #eeeeee;">
+                            <h1 style="margin: 0; color: #333333; font-size: 32px; letter-spacing: -1px;">JuTeK</h1>
+                            <p style="margin: 5px 0 0 0; color: #e65100; font-weight: bold; font-size: 18px;">Jurnal Teknologi Karyawan</p>
+                            <div style="margin-top: 10px; color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">Edisi Februari 2026</div>
+                        </td>
+                    </tr>
 
-        <hr>
+                    <!-- SECTION: EVALUASI -->
+                    <tr>
+                        <td style="padding: 30px 15%;">
+                            <div style="text-align: center; background-color: #ffffff; border: 1px solid #f0f0f0; border-radius: 12px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                                <span style="background-color: #f57c00; color: #ffffff; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase;">Laporan Evaluasi</span>
+                                <h2 style="margin: 15px 0 5px 0; color: #333333; font-size: 22px;">Evaluasi Program JuTeK</h2>
+                                <p style="margin: 0 0 20px 0; color: #666666; font-size: 14px;">Suara Karyawan untuk Pengembangan Bersama</p>
+                                
+                                <!-- Infografis -->
+                                <img src="ev25.png" alt="Infografis Evaluasi JuTeK" width="100%" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #eeeeee;" onerror="this.src='https://placehold.co/600x400/EEE/31343C?text=Infografis+ev25.png';">
+                                
+                                <div style="text-align: left; margin-top: 25px; font-size: 15px; line-height: 1.6; color: #444444;">
+                                    <p style="margin-bottom: 15px;">
+                                        Terima kasih kepada seluruh karyawan. Hasil menunjukkan: <strong>95% responden merasakan manfaat program ini</strong>, dan <strong>85% setuju agar program dilanjutkan</strong>.
+                                    </p>
+                                    
+                                    <div style="background-color: #fff3e0; border-left: 4px solid #e65100; padding: 15px; border-radius: 0 4px 4px 0; font-size: 14px;">
+                                        <strong style="color: #e65100;">Catatan Redaksi:</strong><br>
+                                        Kami mendengar kendala Anda terkait <em>Keterbatasan Waktu (30%)</em>. Edisi mendatang akan difokuskan pada format yang lebih ringkas dan interaktif.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
 
-        <!-- SECTION: ARTIKEL TERBARU -->
-        <section>
-            <h3 style="margin-bottom: 2rem;">Artikel Pilihan Bulan Ini</h3>
-            
-            <div class="grid">
-                
-                <!-- Artikel 1: AUTH -->
-                <article>
-                    <header>
-                        <span class="tag tag-auth">AUTH & SECURITY</span>
-                    </header>
-                    <hgroup>
-                        <h4>Menyelami Dunia Otorisasi</h4>
-                        <p><small>RBAC, ABAC, ACL, dan Peran OAuth 2.0 + JWT</small></p>
-                    </hgroup>
-                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*KQJLoaFnCtWgzENyXB1uzA.png" />
-                    <p>
-                        Pernah dengar istilah “akses ditolak” di aplikasi padahal sudah login? Nah, itu bukan soal autentikasi, melainkan otorisasi. Autentikasi memastikan siapa kamu, otorisasi menentukan apa yang bisa kamu lakukan.
-                    </p>
-                    <p>
-                        Artikel ini akan membahas tiga model otorisasi populer — RBAC, ABAC, dan ACL — serta bagaimana teknologi modern seperti OAuth 2.0 dan JWT membantu menegakkan aturan akses di dunia nyata.
-                    </p>
-                    <footer>
-                        <a href="https://medium.com/@medianraya/menyelami-dunia-otorisasi-rbac-abac-acl-dan-peran-oauth-2-0-jwt-96dc7de72e60" target="_blank" role="button" class="outline">Baca Selengkapnya</a>
-                    </footer>
-                </article>
+                    <tr>
+                        <td style="padding: 0 15%;"><hr style="border: 0; border-top: 1px solid #eeeeee; margin: 0;"></td>
+                    </tr>
 
-                <!-- Artikel 2: PRODUCTIVITY -->
-                <article>
-                    <header>
-                        <span class="tag tag-prod">PRODUCTIVITY</span>
-                    </header>
-                    <hgroup>
-                        <h4>Mengelola Proyek Tanpa Ribet</h4>
-                        <p><small>Pengalaman Menggunakan Trello untuk Produktivitas</small></p>
-                    </hgroup>
-                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*8kIjOZ6l-UdyBnMLmfzpoQ.png" />
-                    <p>
+                    <!-- SECTION: ARTIKEL -->
+                    <tr>
+                        <td style="padding: 30px 15%;">
+                            <h3 style="margin: 0 0 25px 0; color: #333333; text-align: center; font-size: 20px;">Artikel Pilihan Bulan Ini</h3>
+                            
+                            <!-- ARTIKEL 1 -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 40px; border: 1px solid #f0f0f0; border-radius: 8px; padding: 15px;">
+                                <tr>
+                                    <td>
+                                        <span style="background-color: #d32f2f; color: #ffffff; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: bold;">AUTH & SECURITY</span>
+                                        <h4 style="margin: 10px 0 5px 0; font-size: 18px; color: #333333;">Menyelami Dunia Otorisasi</h4>
+                                        <p style="margin: 0 0 15px 0; font-size: 13px; color: #888888;">RBAC, ABAC, ACL, dan Peran OAuth 2.0 + JWT</p>
+                                        <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*KQJLoaFnCtWgzENyXB1uzA.png" width="100%" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px;" alt="Banner Otorisasi">
+                                        <p style="font-size: 14px; line-height: 1.6; color: #555555; margin-bottom: 20px;">
+                                            Pernah dengar istilah “akses ditolak” padahal sudah login? Itu soal otorisasi. Artikel ini membahas tiga model populer: RBAC, ABAC, dan ACL.
+                                        </p>
+                                        <a href="https://medium.com/@medianraya/menyelami-dunia-otorisasi-rbac-abac-acl-dan-peran-oauth-2-0-jwt-96dc7de72e60" style="display: inline-block; padding: 10px 20px; background-color: #ffffff; border: 1px solid #e65100; color: #e65100; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 13px;">Baca Selengkapnya</a>
+                                    </td>
+                                </tr>
+                            </table>
 
-                        Trello kini jadi salah satu tools manajemen kerja yang paling sering dipakai tim kreatif dan developer karena modelnya yang simpel. Banyak orang pakai Trello untuk mengatur proyek secara visual, mulai dari tugas personal sampai pekerjaan level tim.
-                    </p>
-                    <p>
-                        Artikel ini membahas kenapa Trello relevan di tengah meningkatnya kebutuhan kerja yang serba cepat dan bagaimana memanfaatkannya secara maksimal.
-                    </p>
-                    <footer>
-                        <a href="https://medium.com/@medianraya/mengelola-proyek-tanpa-ribet-pengalaman-menggunakan-trello-untuk-produktivitas-masa-kini-704888efb0ef" target="_blank" role="button" class="outline">Baca Selengkapnya</a>
-                    </footer>
-                </article>
+                            <!-- ARTIKEL 2 -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 20px; border: 1px solid #f0f0f0; border-radius: 8px; padding: 15px;">
+                                <tr>
+                                    <td>
+                                        <span style="background-color: #388e3c; color: #ffffff; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: bold;">PRODUCTIVITY</span>
+                                        <h4 style="margin: 10px 0 5px 0; font-size: 18px; color: #333333;">Mengelola Proyek Tanpa Ribet</h4>
+                                        <p style="margin: 0 0 15px 0; font-size: 13px; color: #888888;">Pengalaman Menggunakan Trello untuk Produktivitas</p>
+                                        <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*8kIjOZ6l-UdyBnMLmfzpoQ.png" width="100%" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px;" alt="Banner Trello">
+                                        <p style="font-size: 14px; line-height: 1.6; color: #555555; margin-bottom: 20px;">
+                                            Trello jadi tools favorit karena modelnya yang simpel. Pelajari kenapa Trello relevan untuk kebutuhan kerja yang serba cepat.
+                                        </p>
+                                        <a href="https://medium.com/@medianraya/mengelola-proyek-tanpa-ribet-pengalaman-menggunakan-trello-untuk-produktivitas-masa-kini-704888efb0ef" style="display: inline-block; padding: 10px 20px; background-color: #ffffff; border: 1px solid #e65100; color: #e65100; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 13px;">Baca Selengkapnya</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-            <!-- Logo Updated -->
-            <img src="dasa.png" alt="Logo PT. Dasa Aprilindo Sentosa" class="logo" onerror="this.style.display='none'; document.getElementById('logo-alt').style.display='block';">
-            <div id="logo-alt" style="display:none; font-weight:bold; margin-bottom:1rem; font-size: 1.5rem; color: #e65100;">DASA</div>
-            
-            <p>
-                &copy; 2026 PT. Dasa Aprilindo Sentosa.<br>
-                Program Pengembangan Teknologi & Sumber Daya Manusia.
-            </p>
-        </footer>
-
-    </main>
+                    <!-- FOOTER -->
+                    <tr>
+                        <td style="padding: 40px 15%; background-color: #f9f9f9; text-align: center; border-top: 1px solid #eeeeee;">
+                            <img src="dasa.png" alt="DASA Logo" width="120" style="margin-bottom: 15px;" onerror="this.style.display='none';">
+                            <p style="margin: 0; font-size: 13px; color: #333333; font-weight: bold;">PT. Dasa Aprilindo Sentosa</p>
+                            <p style="margin: 5px 0 0 0; font-size: 12px; color: #999999; line-height: 1.5;">
+                                &copy; 2026 PT. Dasa Aprilindo Sentosa.<br>
+                                Program Pengembangan Teknologi & Sumber Daya Manusia.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
