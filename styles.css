@@ -1,0 +1,240 @@
+/* JuTeK Bulletin - Retro Print Style */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  --pico-font-family: 'Inter', system-ui, sans-serif;
+  --font-header: 'Alfa Slab One', cursive;
+
+  /* Colors */
+  --bg-paper: #fdfbf7;
+  --ink: #2c2c2c;
+  --accent-green: #d1e7dd;
+  --accent-yellow: #fff3cd;
+  --accent-blue: #cfe2ff;
+
+  /* Pico Overrides */
+  --pico-background-color: var(--bg-paper);
+  --pico-color: var(--ink);
+  --pico-primary: var(--ink);
+  --pico-primary-inverse: var(--bg-paper);
+  --pico-border-radius: 0;
+}
+
+/* Force Light Theme Colors even if OS is Dark */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pico-background-color: #fdfbf7 !important;
+    --pico-color: #2c2c2c !important;
+    --pico-h1-color: #2c2c2c !important;
+    --pico-h2-color: #2c2c2c !important;
+    --pico-h3-color: #2c2c2c !important;
+    --pico-h4-color: #2c2c2c !important;
+    --pico-h5-color: #2c2c2c !important;
+    --pico-h6-color: #2c2c2c !important;
+  }
+}
+
+body {
+  background-color: var(--bg-paper);
+  color: var(--ink);
+  border-top: 10px solid var(--ink);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-header);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Header Bulletin Style */
+.bulletin-header {
+  border-bottom: 3px solid var(--ink);
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.bulletin-meta {
+  border-bottom: 2px solid var(--ink);
+  border-top: 2px solid var(--ink);
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bulletin-title {
+  font-size: 5rem;
+  line-height: 0.9;
+  margin: 0;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.bulletin-subtitle {
+  font-family: var(--pico-font-family);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  letter-spacing: 2px;
+}
+
+/* Feature Box (Latest Edition) */
+.feature-box {
+  border: 3px solid var(--ink);
+  background: var(--accent-green);
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 8px 8px 0px var(--ink);
+  position: relative;
+}
+
+.feature-tag {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: var(--ink);
+  color: white;
+  padding: 0.25rem 1rem;
+  font-family: var(--font-header);
+  transform: rotate(-2deg);
+}
+
+.feature-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.feature-img {
+  border: 3px solid var(--ink);
+  width: 100%;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Archives Grid */
+.archives-section {
+  position: relative;
+  padding-top: 1rem;
+}
+
+.archives-section h2 {
+  border-bottom: 3px solid var(--ink);
+  display: table;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.archive-card {
+  border: 3px solid var(--ink);
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 4px 4px 0px var(--ink);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--ink);
+}
+
+.archive-card.bg-yellow {
+  background-color: var(--accent-yellow);
+}
+
+.archive-card.bg-blue {
+  background-color: var(--accent-blue);
+}
+
+.archive-header {
+  border-bottom: 2px dashed var(--ink);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.archive-month {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.archive-year {
+  background: var(--ink);
+  color: white;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.archive-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.btn-retro {
+  background: var(--ink);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.btn-retro:hover {
+  background: #444;
+  color: white;
+}
+
+/* Footer */
+.retro-footer {
+  margin-top: 5rem;
+  border-top: 5px solid var(--ink);
+  padding: 4rem 0;
+  text-align: center;
+  background-color: var(--ink);
+  color: var(--accent-yellow);
+  position: relative;
+}
+
+.retro-footer p strong {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bulletin-title {
+    font-size: 3rem;
+  }
+
+  .feature-content {
+    grid-template-columns: 1fr;
+  }
+}

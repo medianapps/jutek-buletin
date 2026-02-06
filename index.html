@@ -1,111 +1,185 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JuTeK - Jurnal Teknologi Karyawan</title>
+    <title>JuTeK - Buletin Teknologi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<body>
 
-    <!-- PEMBUNGKUS UTAMA -->
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f4f4f4; padding: 20px 0;">
-        <tr>
-            <td align="center">
-                <!-- KONTAINER EMAIL -->
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 650px; background-color: #ffffff; border: 1px solid #dddddd; border-radius: 8px; overflow: hidden;">
-                    
-                    <!-- HEADER -->
-                    <tr>
-                        <td style="padding: 40px 15% 20px 15%; text-align: center; border-bottom: 1px solid #eeeeee;">
-                            <h1 style="margin: 0; color: #333333; font-size: 32px; letter-spacing: -1px;">JuTeK</h1>
-                            <p style="margin: 5px 0 0 0; color: #e65100; font-weight: bold; font-size: 18px;">Jurnal Teknologi Karyawan</p>
-                            <div style="margin-top: 10px; color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">Edisi Februari 2026</div>
-                        </td>
-                    </tr>
+    <main class="container">
+        <!-- Bulletin Header -->
+        <header class="bulletin-header">
+            <div class="bulletin-meta">
+                <span>Thynk Unlimited</span>
+                <span id="current-date">EDISI LATEST</span>
+            </div>
+            <h1 class="bulletin-title">BULETIN</h1>
+            <div class="bulletin-subtitle">Jurnal Teknologi Karyawan</div>
+        </header>
 
-                    <!-- SECTION: EVALUASI -->
-                    <tr>
-                        <td style="padding: 30px 15%;">
-                            <div style="text-align: center; background-color: #ffffff; border: 1px solid #f0f0f0; border-radius: 12px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                                <span style="background-color: #f57c00; color: #ffffff; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase;">Laporan Evaluasi</span>
-                                <h2 style="margin: 15px 0 5px 0; color: #333333; font-size: 22px;">Evaluasi Program JuTeK</h2>
-                                <p style="margin: 0 0 20px 0; color: #666666; font-size: 14px;">Suara Karyawan untuk Pengembangan Bersama</p>
-                                
-                                <!-- Infografis -->
-                                <img src="ev25.png" alt="Infografis Evaluasi JuTeK" width="100%" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #eeeeee;" onerror="this.src='https://placehold.co/600x400/EEE/31343C?text=Infografis+ev25.png';">
-                                
-                                <div style="text-align: left; margin-top: 25px; font-size: 15px; line-height: 1.6; color: #444444;">
-                                    <p style="margin-bottom: 15px;">
-                                        Terima kasih kepada seluruh karyawan. Hasil menunjukkan: <strong>95% responden merasakan manfaat program ini</strong>, dan <strong>85% setuju agar program dilanjutkan</strong>.
-                                    </p>
-                                    
-                                    <div style="background-color: #fff3e0; border-left: 4px solid #e65100; padding: 15px; border-radius: 0 4px 4px 0; font-size: 14px;">
-                                        <strong style="color: #e65100;">Catatan Redaksi:</strong><br>
-                                        Kami mendengar kendala Anda terkait <em>Keterbatasan Waktu (30%)</em>. Edisi mendatang akan difokuskan pada format yang lebih ringkas dan interaktif.
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+        <!-- Feature Box (Latest Edition) -->
+        <section id="feature-section" style="display: none;">
+            <div class="feature-box">
+                <div class="feature-tag">EDISI TERBARU</div>
+                <div class="feature-content">
+                    <div>
+                        <h2 id="feature-title">Masalah Yang Dihadapi Hewan</h2>
+                        <ul id="feature-list">
+                            <li>Klik tombol di bawah untuk membaca lengkap.</li>
+                        </ul>
+                        <div style="margin-top: 2rem;">
+                            <a href="#" id="feature-link" class="btn-retro">BACA SEKARANG &rarr;</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img id="feature-image" src="hero.png" alt="Ilustrasi" class="feature-img" onerror="this.src='https://placehold.co/600x400/2c2c2c/fff?text=JuTeK';">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <tr>
-                        <td style="padding: 0 15%;"><hr style="border: 0; border-top: 1px solid #eeeeee; margin: 0;"></td>
-                    </tr>
+        <!-- Archives Grid -->
+        <section class="archives-section">
+            <h2>Arsip Edisi Lalu</h2>
+            <div id="archives-container" class="bento-grid">
+                <!-- Javascript will populate this -->
+                <article aria-busy="true">Sedang memuat arsip...</article>
+            </div>
+        </section>
 
-                    <!-- SECTION: ARTIKEL -->
-                    <tr>
-                        <td style="padding: 30px 15%;">
-                            <h3 style="margin: 0 0 25px 0; color: #333333; text-align: center; font-size: 20px;">Artikel Pilihan Bulan Ini</h3>
-                            
-                            <!-- ARTIKEL 1 -->
-                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 40px; border: 1px solid #f0f0f0; border-radius: 8px; padding: 15px;">
-                                <tr>
-                                    <td>
-                                        <span style="background-color: #d32f2f; color: #ffffff; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: bold;">AUTH & SECURITY</span>
-                                        <h4 style="margin: 10px 0 5px 0; font-size: 18px; color: #333333;">Menyelami Dunia Otorisasi</h4>
-                                        <p style="margin: 0 0 15px 0; font-size: 13px; color: #888888;">RBAC, ABAC, ACL, dan Peran OAuth 2.0 + JWT</p>
-                                        <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*KQJLoaFnCtWgzENyXB1uzA.png" width="100%" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px;" alt="Banner Otorisasi">
-                                        <p style="font-size: 14px; line-height: 1.6; color: #555555; margin-bottom: 20px;">
-                                            Pernah dengar istilah “akses ditolak” padahal sudah login? Itu soal otorisasi. Artikel ini membahas tiga model populer: RBAC, ABAC, dan ACL.
-                                        </p>
-                                        <a href="https://medium.com/@medianraya/menyelami-dunia-otorisasi-rbac-abac-acl-dan-peran-oauth-2-0-jwt-96dc7de72e60" style="display: inline-block; padding: 10px 20px; background-color: #ffffff; border: 1px solid #e65100; color: #e65100; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 13px;">Baca Selengkapnya</a>
-                                    </td>
-                                </tr>
-                            </table>
+    </main>
 
-                            <!-- ARTIKEL 2 -->
-                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 20px; border: 1px solid #f0f0f0; border-radius: 8px; padding: 15px;">
-                                <tr>
-                                    <td>
-                                        <span style="background-color: #388e3c; color: #ffffff; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: bold;">PRODUCTIVITY</span>
-                                        <h4 style="margin: 10px 0 5px 0; font-size: 18px; color: #333333;">Mengelola Proyek Tanpa Ribet</h4>
-                                        <p style="margin: 0 0 15px 0; font-size: 13px; color: #888888;">Pengalaman Menggunakan Trello untuk Produktivitas</p>
-                                        <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*8kIjOZ6l-UdyBnMLmfzpoQ.png" width="100%" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px;" alt="Banner Trello">
-                                        <p style="font-size: 14px; line-height: 1.6; color: #555555; margin-bottom: 20px;">
-                                            Trello jadi tools favorit karena modelnya yang simpel. Pelajari kenapa Trello relevan untuk kebutuhan kerja yang serba cepat.
-                                        </p>
-                                        <a href="https://medium.com/@medianraya/mengelola-proyek-tanpa-ribet-pengalaman-menggunakan-trello-untuk-produktivitas-masa-kini-704888efb0ef" style="display: inline-block; padding: 10px 20px; background-color: #ffffff; border: 1px solid #e65100; color: #e65100; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 13px;">Baca Selengkapnya</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
+    <footer class="retro-footer">
+        <div class="container">
+            <img src="dasa.png" alt="DASA Logo" style="height: 60px; margin-bottom: 1rem;" onerror="this.style.display='none'">
+            <p><strong>PT. Dasa Aprilindo Sentosa</strong></p>
+            <p>Program Pengembangan Teknologi & Sumber Daya Manusia</p>
+            <small>&copy; 2026 All Rights Reserved.</small>
+        </div>
+    </footer>
 
-                    <!-- FOOTER -->
-                    <tr>
-                        <td style="padding: 40px 15%; background-color: #f9f9f9; text-align: center; border-top: 1px solid #eeeeee;">
-                            <img src="dasa.png" alt="DASA Logo" width="120" style="margin-bottom: 15px;" onerror="this.style.display='none';">
-                            <p style="margin: 0; font-size: 13px; color: #333333; font-weight: bold;">PT. Dasa Aprilindo Sentosa</p>
-                            <p style="margin: 5px 0 0 0; font-size: 12px; color: #999999; line-height: 1.5;">
-                                &copy; 2026 PT. Dasa Aprilindo Sentosa.<br>
-                                Program Pengembangan Teknologi & Sumber Daya Manusia.
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+    <script>
+        // Konfigurasi File
+        const articleFiles = [
+            '2602.html', '2601.html', 
+            '2512.html', '2511.html', '2510.html', '2509.html'
+        ];
 
+        const monthNames = [
+            'Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 
+            'Jul', 'Agt', 'Sep', 'Okt', 'Nov', 'Des'
+        ];
+
+        function getMonthName(monthIndex) {
+            return monthNames[parseInt(monthIndex) - 1] || 'Bulan ' + monthIndex;
+        }
+
+        async function init() {
+            const container = document.getElementById('archives-container');
+            const featureSection = document.getElementById('feature-section');
+            const featureTitle = document.getElementById('feature-title');
+            const featureLink = document.getElementById('feature-link');
+            const currentDate = document.getElementById('current-date');
+            
+            const articles = [];
+
+            // 1. Fetch data
+            for (const file of articleFiles) {
+                const baseName = file.split('.')[0];
+                const yearShort = baseName.substring(0, 2);
+                const monthStr = baseName.substring(2, 4);
+                const yearFull = '20' + yearShort;
+
+                try {
+                    const resp = await fetch(file);
+                    let title = `Edisi ${getMonthName(monthStr)}`;
+                    let image = null;
+
+                    if (resp.ok) {
+                        const text = await resp.text();
+                        const doc = new DOMParser().parseFromString(text, 'text/html');
+                        
+                        const h1 = doc.querySelector('h1, h2');
+                        if (h1) title = h1.textContent.trim();
+                        else if (doc.title) title = doc.title;
+
+                         // Extract first image
+                        const imgEl = doc.querySelector('img');
+                        if (imgEl) image = imgEl.getAttribute('src');
+                    }
+
+                    articles.push({
+                        file,
+                        month: monthStr,
+                        monthName: getMonthName(monthStr),
+                        year: yearFull,
+                        title,
+                        image
+                    });
+                } catch (e) {
+                    console.error("Error loading", file, e);
+                }
+            }
+
+            // 2. Render Latest (Feature)
+            if (articles.length > 0) {
+                const latest = articles[0];
+                featureSection.style.display = 'block';
+                featureTitle.textContent = latest.title;
+                featureLink.href = latest.file; // Dynamic Link Fix
+                currentDate.textContent = `EDISI ${latest.monthName.toUpperCase()} ${latest.year}`;
+                
+                if (latest.image) {
+                     document.getElementById('feature-image').src = latest.image;
+                }
+
+                // Add specific subtitle/bullets if needed, for now generic
+                const list = document.getElementById('feature-list');
+                list.innerHTML = `
+                    <li>Edisi Unggulan Bulan ${latest.monthName}</li>
+                    <li>Wawasan Teknologi Terbaru</li>
+                    <li>Studi Kasus & Implementasi</li>
+                `;
+            }
+
+            // 3. Render Archives (Skip first if it's featured)
+            container.innerHTML = '';
+            const archives = articles.slice(1);
+            
+            archives.forEach((item, index) => {
+                const card = document.createElement('article');
+                card.className = 'archive-card';
+                // Rotate colors
+                if (index % 3 === 0) card.classList.add('bg-yellow');
+                if (index % 3 === 1) card.classList.add('bg-blue');
+
+                // Image HTML
+                let imgHTML = '';
+                if(item.image) {
+                    imgHTML = `<div style="height: 150px; overflow: hidden; border-bottom: 2px solid var(--ink); margin: -1.5rem -1.5rem 1rem -1.5rem;">
+                        <img src="${item.image}" alt="${item.title}" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>`;
+                }
+
+                card.innerHTML = `
+                    ${imgHTML}
+                    <div class="archive-header">
+                        <span class="archive-month">${item.monthName.toUpperCase()}</span>
+                        <span class="archive-year">${item.year}</span>
+                    </div>
+                    <div class="archive-footer">
+                        <a href="${item.file}" class="btn-retro">BACA ARSIP</a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+
+        init();
+    </script>
 </body>
 </html>
