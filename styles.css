@@ -222,6 +222,11 @@ h6 {
   position: relative;
 }
 
+.retro-footer p,
+.retro-footer small {
+  color: var(--accent-yellow);
+}
+
 .retro-footer p strong {
   color: #fff;
   font-size: 1.2rem;
