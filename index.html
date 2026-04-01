@@ -73,6 +73,7 @@
     <script>
         // Konfigurasi File
         const articleFiles = [
+            '202604.html',
             '2603.html', '2602.html', '2601.html', 
             '2512.html', '2511.html', '2510.html', '2509.html'
         ];
@@ -98,9 +99,18 @@
             // 1. Fetch data
             for (const file of articleFiles) {
                 const baseName = file.split('.')[0];
-                const yearShort = baseName.substring(0, 2);
-                const monthStr = baseName.substring(2, 4);
-                const yearFull = '20' + yearShort;
+                let yearShort, monthStr, yearFull;
+
+                if (baseName.length === 6) {
+                    // Format: YYYYMM (e.g. 202604)
+                    yearFull = baseName.substring(0, 4);
+                    monthStr = baseName.substring(4, 6);
+                } else {
+                    // Format: YYMM (e.g. 2603)
+                    yearShort = baseName.substring(0, 2);
+                    monthStr = baseName.substring(2, 4);
+                    yearFull = '20' + yearShort;
+                }
 
                 try {
                     const resp = await fetch(file);
