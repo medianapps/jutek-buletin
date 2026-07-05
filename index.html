@@ -73,7 +73,7 @@
     <script>
         // Konfigurasi File
         const articleFiles = [
-            '2606.html', '2605.html', '202604.html',
+            '2607.html', '2606.html', '2605.html', '202604.html',
             '2603.html', '2602.html', '2601.html', 
             '2512.html', '2511.html', '2510.html', '2509.html'
         ];
@@ -125,9 +125,16 @@
                         if (h1) title = h1.textContent.trim();
                         else if (doc.title) title = doc.title;
 
-                         // Extract first image
+                        // Extract first image
                         const imgEl = doc.querySelector('img');
                         if (imgEl) image = imgEl.getAttribute('src');
+
+                        // Fallback to a matching PNG illustration when present
+                        if (!image) {
+                            const fallbackImage = `${baseName}.png`;
+                            const fallbackResp = await fetch(fallbackImage, { method: 'HEAD' });
+                            if (fallbackResp.ok) image = fallbackImage;
+                        }
                     }
 
                     articles.push({
