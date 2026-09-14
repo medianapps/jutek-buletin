@@ -73,7 +73,7 @@
     <script>
         // Konfigurasi File
         const articleFiles = [
-            '2608.html', '2607.html', '2606.html', '2605.html', '202604.html',
+            '2609.html', '2608.html', '2607.html', '2606.html', '2605.html', '202604.html',
             '2603.html', '2602.html', '2601.html', 
             '2512.html', '2511.html', '2510.html', '2509.html'
         ];
@@ -134,6 +134,24 @@
                             const fallbackImage = `${baseName}.png`;
                             const fallbackResp = await fetch(fallbackImage, { method: 'HEAD' });
                             if (fallbackResp.ok) image = fallbackImage;
+                        }
+
+                        // Final fallback: create a simple inline SVG cover when archive has no image
+                        if (!image) {
+                            const monthLabel = getMonthName(monthStr).toUpperCase();
+                            const yearLabel = yearFull;
+                            image = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`
+                                <svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+                                  <rect width="900" height="520" fill="#f0e9d6"/>
+                                  <rect x="24" y="24" width="852" height="472" fill="#f0e9d6" stroke="#1f1f1f" stroke-width="6"/>
+                                  <rect x="80" y="120" width="740" height="180" fill="#f2f4f7" opacity="0.35"/>
+                                  <text x="450" y="220" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" fill="#1b1d22">${monthLabel}</text>
+                                  <text x="450" y="290" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#1b1d22">${yearLabel}</text>
+                                  <line x1="170" y1="330" x2="730" y2="330" stroke="#1b1d22" stroke-width="5" stroke-dasharray="16 14"/>
+                                  <rect x="310" y="370" width="280" height="60" rx="8" fill="#1b1d22"/>
+                                  <text x="450" y="410" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" fill="#ffffff">BACA ARSIP</text>
+                                </svg>
+                            `)}`;
                         }
                     }
 
